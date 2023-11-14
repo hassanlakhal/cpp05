@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 01:59:23 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 02:48:50 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
             virtual const char* what() const throw();
     };
     Bureaucrat();
+    Bureaucrat(const Bureaucrat& other);
+    Bureaucrat& operator=(const Bureaucrat& other);
     Bureaucrat(const std::string& name, int grade);
     const std::string& getName() const;
     const int & getGrade() const;
