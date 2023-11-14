@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 03:55:01 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 06:47:53 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
     const std::string& getName() const;
     const int & getGradeSing() const;
     const int & getGradeExecute() const;
+    const bool & getSig()const;
     void beSigned(const Bureaucrat& other);
     ~Form();
 };
