@@ -6,13 +6,15 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 06:47:53 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:34:56 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#ifndef FORM_HPP
+#define FORM_HPP
 #include<iostream>
 #include"Bureaucrat.hpp"
+class Bureaucrat;
 class Form
 {
 private:
@@ -21,6 +23,16 @@ private:
     const int gradeSing;
     const int gradeExecute;
 public:
+    class GradeTooHighException : public std::exception
+    {
+        public:
+            virtual const char* what() const throw();
+    };
+    class GradeTooLowException : public std::exception
+    {
+        public:
+            virtual const char* what() const throw();
+    };
     Form();
     Form(const std::string& name, const int& gradeSing, const int& gradeExecute);
     const std::string& getName() const;
@@ -30,5 +42,5 @@ public:
     void beSigned(const Bureaucrat& other);
     ~Form();
 };
-
+#endif
 

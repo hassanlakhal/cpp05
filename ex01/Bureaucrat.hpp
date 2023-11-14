@@ -6,12 +6,16 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 02:48:50 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:37:26 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
+#include<iostream>
+#include"Form.hpp"
+class Form;
 class Bureaucrat
 {
 private:
@@ -36,9 +40,10 @@ public:
     const int & getGrade() const;
     void increment();
     void decrement();
+    void signForm(Form& other);
     ~Bureaucrat();
 };
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
 
-
+#endif
 

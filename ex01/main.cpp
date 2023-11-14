@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 01:59:43 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:52:07 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int main()
     try
     {
         Bureaucrat obj("GradeHigh", 149);
-        obj.decrement();
-        std::cout << obj << std::endl;
-        Bureaucrat obj1("GradeLow", 1);
-        obj1.increment();
-        std::cout << obj1 << std::endl;
+        Form form("form",150,2);
+        obj.signForm(form);
+        // obj.decrement();
+        // std::cout << obj << std::endl;
+        
     }
     catch (std::exception& e)
     {
