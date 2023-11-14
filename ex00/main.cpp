@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 01:51:09 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/14 01:59:43 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,7 @@ int main()
         obj1.increment();
         std::cout << obj1 << std::endl;
     }
-    catch (Bureaucrat::GradeTooHighException& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-    catch (Bureaucrat::GradeTooLowException& e)
+    catch (std::exception& e)
     {
         std::cerr << e.what() << std::endl;
     }
