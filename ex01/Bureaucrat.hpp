@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 23:37:26 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:10:18 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class Form;
 class Bureaucrat
 {
-private:
-    const std::string name;
-    int grade;
-public:
+    private:
+        const std::string name;
+        int grade;
+    public:
     class GradeTooHighException : public std::exception
     {
         public:

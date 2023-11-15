@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:35 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 23:37:08 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/15 06:32:58 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ Form::Form(const std::string& name, const int& gradeSing, const int& gradeExecut
 sig(false),gradeSing(gradeSing),gradeExecute(gradeExecute)
 {
 
+}
+
+Form::Form(const Form& other):name(other.name),sig(other.sig)\
+,gradeSing(other.gradeSing),gradeExecute(other.gradeExecute)
+{
+    std::cout << "copy construct " << std::endl;
+}
+
+Form& Form::operator=(const Form& other)
+{
+    if (this == &other)
+        return *this;
+    this->~Form();
+    new (this)Form(other);
+    return *this;
 }
 
 const int& Form::getGradeSing() const
@@ -63,4 +78,5 @@ void Form::beSigned(const Bureaucrat& other)
 
 Form::~Form()
 {
+    std::cout << "destructor" << std::endl;
 }
