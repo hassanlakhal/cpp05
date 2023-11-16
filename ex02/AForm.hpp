@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 04:44:04 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:58:45 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 #include<iostream>
+#include <fstream>
 #include"Bureaucrat.hpp"
 class Bureaucrat;
 class Form
 {
-private:
+protected:
     const std::string name;
     bool sig;
     const int gradeSing;
@@ -42,6 +43,7 @@ public:
     const int & getGradeExecute() const;
     const bool & getSig()const;
     void beSigned(const Bureaucrat& other);
+    virtual void execute(Bureaucrat const & executor) const = 0;
     ~Form();
 };
 #endif

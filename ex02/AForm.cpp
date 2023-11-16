@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:35 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 06:32:58 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/16 03:02:01 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Form.hpp"
+#include"AForm.hpp"
 
 const char *Form::GradeTooHighException::what() const throw()
 {
@@ -43,8 +43,7 @@ Form& Form::operator=(const Form& other)
 {
     if (this == &other)
         return *this;
-    this->~Form();
-    new (this)Form(other);
+    this->sig = other.sig;
     return *this;
 }
 
@@ -70,7 +69,7 @@ const bool& Form::getSig() const
 
 void Form::beSigned(const Bureaucrat& other)
 {
-    if(other.getGrade() >= gradeSing)
+    if(other.getGrade() <= gradeSing)
         sig = true;
     else
         throw GradeTooLowException();

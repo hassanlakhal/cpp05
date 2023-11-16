@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 00:10:18 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/16 01:18:53 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include<iostream>
-#include"Form.hpp"
+#include"AForm.hpp"
 class Form;
 class Bureaucrat
 {
