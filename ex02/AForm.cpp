@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:35 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 03:02:01 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:28:32 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,5 @@ void Form::beSigned(const Bureaucrat& other)
 
 Form::~Form()
 {
-    std::cout << "destructor" << std::endl;
+    // std::cout << "destructor" << std::endl;
 }
