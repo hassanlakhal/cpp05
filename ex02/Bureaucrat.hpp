@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 01:18:53 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:45:29 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class Bureaucrat
     void increment();
     void decrement();
     void signForm(Form& other);
+    void executeForm(Form const & form);
     ~Bureaucrat();
 };
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

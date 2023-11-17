@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:25 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 23:47:26 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/17 01:04:17 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if(!sig || (executor.getGrade() > gradeExecute))
-    {
-        
-    std::cout << sig << std::endl;
         throw GradeTooHighException();
-    }
+    std::cout << "creat file of the name: " <<"[ " << this->name << "_shrubbery ]" << std::endl;
     std::ofstream file(this->name + "_shrubbery");
     file << "   ccee88oo\n";
     file << "  C8O8O8Q8PoOb o8oo\n";

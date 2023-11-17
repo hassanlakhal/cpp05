@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:57:00 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 23:36:59 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:55:08 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,19 @@ void Bureaucrat::signForm(Form& other)
 }
 
 Bureaucrat::~Bureaucrat() {}
+
+void Bureaucrat::executeForm(Form const & form)
+{
+    try
+    {
+        form.execute(*this);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+}
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 {
