@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 00:58:45 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/17 01:37:40 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include<iostream>
 #include <fstream>
 #include"Bureaucrat.hpp"
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
 class Bureaucrat;
 class Form
 {
