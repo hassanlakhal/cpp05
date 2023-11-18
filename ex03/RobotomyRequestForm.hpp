@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 21:57:16 by hlakhal-         ###   ########.fr       */
+/*   Created: 2023/11/15 22:11:22 by hlakhal-          #+#    #+#             */
+/*   Updated: 2023/11/16 17:41:18 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Bureaucrat.hpp"
 
-int main()
+#include"AForm.hpp"
+
+class RobotomyRequestForm : public Form
 {
-    try
-    {
-        Bureaucrat obj("GradeHigh", 149);
-        // obj = obj1;
-        Form form("form",10,2);
-        // Form form1("test",150,2);
-        obj.signForm(form); 
-      
-    }
-    catch (std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-    return 0;
-}
+    public:
+        RobotomyRequestForm();
+        RobotomyRequestForm(std::string target);
+        ~RobotomyRequestForm();
+        void execute(Bureaucrat const & executor) const;
+};
+
+

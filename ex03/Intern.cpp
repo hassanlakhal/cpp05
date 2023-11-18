@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 21:57:16 by hlakhal-         ###   ########.fr       */
+/*   Created: 2023/11/18 22:38:14 by hlakhal-          #+#    #+#             */
+/*   Updated: 2023/11/18 23:09:25 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Bureaucrat.hpp"
+#include"Intern.hpp"
 
-int main()
+Intern::Intern()
 {
-    try
-    {
-        Bureaucrat obj("GradeHigh", 149);
-        // obj = obj1;
-        Form form("form",10,2);
-        // Form form1("test",150,2);
-        obj.signForm(form); 
-      
-    }
-    catch (std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-    return 0;
+    
+}
+
+Intern::~Intern()
+{
+    
 }
