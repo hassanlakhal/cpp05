@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/17 01:37:40 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/19 01:50:16 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ public:
     const bool & getSig()const;
     void beSigned(const Bureaucrat& other);
     virtual void execute(Bureaucrat const & executor) const = 0;
-    ~Form();
+    virtual ~Form();
 };
 #endif
 
