@@ -6,20 +6,32 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:25 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/17 01:04:17 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:40:33 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm():Form("unknow",145,137)
+ShrubberyCreationForm::ShrubberyCreationForm():AForm("unknow",145,137)
 {
     
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form(target,145,137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target):AForm(target,145,137)
 {
     
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other):AForm(other)
+{
+   
+}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
+{
+   if (this != &other)
+      this->sig = other.sig;
+   return *this;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()

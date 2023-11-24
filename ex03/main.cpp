@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/19 02:00:30 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:47:38 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
     try
     {
         Intern someRandomIntern;
-        Form* rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
+        AForm* rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
         Bureaucrat bureaucrat("John Doe", 50);
         bureaucrat.signForm(*rrf);
         bureaucrat.executeForm(*rrf);

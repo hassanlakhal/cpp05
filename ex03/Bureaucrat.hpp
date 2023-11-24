@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:55 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/17 00:45:29 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:21:03 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include<iostream>
 #include"AForm.hpp"
-class Form;
+class AForm;
 class Bureaucrat
 {
     private:
@@ -40,8 +40,8 @@ class Bureaucrat
     const int & getGrade() const;
     void increment();
     void decrement();
-    void signForm(Form& other);
-    void executeForm(Form const & form);
+    void signForm(AForm& other);
+    void executeForm(AForm const & form);
     ~Bureaucrat();
 };
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

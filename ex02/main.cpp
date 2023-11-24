@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/17 02:37:31 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:26:34 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
         // a[0]->execute(bureaucrat);
         // a[1]->execute(bureaucrat);
         // a[2]->execute(bureaucrat);
-        Bureaucrat bureaucrat("Jack_Td", 140);
+        Bureaucrat bureaucrat("Jack_Td", 130);
         ShrubberyCreationForm shrubberyForm("home");
         RobotomyRequestForm robotomyForm("office");
         PresidentialPardonForm pardonForm("friend");

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*   AAForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -19,7 +19,7 @@
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
 class Bureaucrat;
-class Form
+class AForm
 {
 protected:
     const std::string name;
@@ -37,17 +37,17 @@ public:
         public:
             virtual const char* what() const throw();
     };
-    Form();
-    Form(const std::string& name, const int& gradeSing, const int& gradeExecute);
+    AForm();
+    AForm(const std::string& name, const int& gradeSing, const int& gradeExecute);
     const std::string& getName() const;
-    Form& operator=(const Form& other);
-    Form(const Form& other);
+    AForm& operator=(const AForm& other);
+    AForm(const AForm& other);
     const int & getGradeSing() const;
     const int & getGradeExecute() const;
     const bool & getSig()const;
     void beSigned(const Bureaucrat& other);
     virtual void execute(Bureaucrat const & executor) const = 0;
-    virtual ~Form();
+    virtual ~AForm();
 };
 #endif
 

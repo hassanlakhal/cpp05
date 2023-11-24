@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 22:38:14 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/19 01:54:47 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:47:57 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int Intern::getIndxForm(const std::string& name)
     }
     return 0;
 }
-Form* Intern::makeForm(const std::string& name, const std::string& target)
+AForm* Intern::makeForm(const std::string& name, const std::string& target)
 {
-    Form *A;
+    AForm *A;
     int a = getIndxForm(name);
     switch (a)
     {

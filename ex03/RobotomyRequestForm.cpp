@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:17 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 23:55:33 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:38:36 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ RobotomyRequestForm::RobotomyRequestForm()
     
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target):Form(target,72,45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target):AForm(target,72,45)
 {
     
 }
@@ -36,6 +36,19 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     else
         std::cout << executor.getName() << " has not been robotomized "<< std::endl;
 }
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other):AForm(other)
+{
+   
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
+{
+   if (this != &other)
+      this->sig = other.sig;
+   return *this;
+}
+
 RobotomyRequestForm::~RobotomyRequestForm()
 {
     
