@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 22:38:20 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/24 22:47:24 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 14:31:25 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
     int getIndxForm(const std::string& name);
     class UndefineForm : public std::exception
     {
-        virtual const char* what() const throw();
+        const char* what() const throw();
     };
     ~Intern();
 };

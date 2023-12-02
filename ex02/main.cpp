@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/02 11:00:07 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:28:00 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,23 @@ int main()
         a[0]->execute(bureaucrat);
         a[1]->execute(bureaucrat);
         a[2]->execute(bureaucrat);
-        // Bureaucrat bureaucrat("Jack_Td", 130);
-        // ShrubberyCreationForm shrubberyForm("home");
-        // RobotomyRequestForm robotomyForm("office");
-        // PresidentialPardonForm pardonForm("friend");
+        std::cout << "\n-----------------------------------\n";
+        Bureaucrat burt("Jack_Td", 45);
+        ShrubberyCreationForm shrubberyForm("home");
+        RobotomyRequestForm robotomyForm("office");
+        PresidentialPardonForm pardonForm("friend");
 
-        // bureaucrat.signForm(shrubberyForm);
-        // bureaucrat.signForm(robotomyForm);
-        // bureaucrat.signForm(pardonForm);
+        burt.signForm(shrubberyForm);
+        burt.signForm(robotomyForm);
+        burt.signForm(pardonForm);
 
-        // bureaucrat.executeForm(shrubberyForm);
-        // bureaucrat.executeForm(robotomyForm);
-        // bureaucrat.executeForm(pardonForm);
+        burt.executeForm(shrubberyForm);
+        burt.executeForm(robotomyForm);
+        burt.executeForm(pardonForm);
+         for (int i = 0; i < 3; i++)
+        {
+            delete a[i];
+        }
     }
     catch (std::exception& e)
     {

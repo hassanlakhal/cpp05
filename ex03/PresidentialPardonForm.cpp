@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:10 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/24 22:36:58 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:11:54 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& oth
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other)
 {
    if (this != &other)
-      this->sig = other.sig;
+      this->setSing(other.getSig());
    return *this;
 }
 
@@ -41,7 +41,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-   if (!sig || executor.getGrade() >= gradeExecute)
-      throw GradeTooHighException();
+   if (!this->getSig() || executor.getGrade() > this->getGradeExecute())
+      throw GradeTooLowException();
    std::cout << executor.getName() << " has been pardoned by Zaphod Beeblebrox. " << std::endl;
 }

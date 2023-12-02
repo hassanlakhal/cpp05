@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/02 10:21:27 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 14:20:01 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ public:
     class GradeTooHighException : public std::exception
     {
         public:
-            virtual const char* what() const throw();
+            const char* what() const throw();
     };
     class GradeTooLowException : public std::exception
     {
         public:
-            virtual const char* what() const throw();
+            const char* what() const throw();
     };
     Form();
     Form(const std::string& name, const int& gradeSing, const int& gradeExecute);

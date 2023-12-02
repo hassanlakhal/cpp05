@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:57:00 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 03:01:33 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 13:30:06 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,21 @@ Bureaucrat::Bureaucrat() : name("Unknown name"), grade(0) {}
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name)
 {
     if (grade < 1)
-        throw GradeTooLowException();
-    else if (grade > 150)
         throw GradeTooHighException();
+    else if (grade > 150)
+        throw GradeTooLowException();
     this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other)
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name)
 {
-    (std::string)this->name = other.name;
     this->grade = other.grade;
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
    if(this != &other)
-   {
-        (std::string)this->name = other.name;
         this->grade = other.grade;
-   }
    return *this;
 }
 
@@ -61,7 +57,7 @@ const int& Bureaucrat::getGrade() const
 
 void Bureaucrat::increment()
 {
-    if (grade <= 1)
+    if (grade == 1)
         throw GradeTooHighException();
     else
         this->grade--;
@@ -69,7 +65,7 @@ void Bureaucrat::increment()
 
 void Bureaucrat::decrement()
 {
-    if (grade >= 150)
+    if (grade == 150)
         throw GradeTooLowException();
     else
         this->grade++;

@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:25 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/24 22:40:33 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:11:37 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
 {
    if (this != &other)
-      this->sig = other.sig;
+      this->setSing(other.getSig());
    return *this;
 }
 
@@ -40,10 +40,10 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    if(!sig || (executor.getGrade() > gradeExecute))
-        throw GradeTooHighException();
-    std::cout << "creat file of the name: " <<"[ " << this->name << "_shrubbery ]" << std::endl;
-    std::ofstream file(this->name + "_shrubbery");
+    if(!this->getSig() || (executor.getGrade() > this->getGradeExecute()))
+        throw GradeTooLowException();
+    std::cout << "creat file of the name: " <<"[ " << this->getName() << "_shrubbery ]" << std::endl;
+    std::ofstream file(this->getName() + "_shrubbery");
     file << "   ccee88oo\n";
     file << "  C8O8O8Q8PoOb o8oo\n";
     file << " dOB69QO8PdUOpugoO9bD\n";
@@ -57,3 +57,5 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     file << "   .....//||||\\....\n";
    file.close();
 }
+
+// HIGHT -  1 2 3 4  5 6 7 8 . . . 150 -> LOW

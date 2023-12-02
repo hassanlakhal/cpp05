@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:35 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/02 10:22:24 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:05:43 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ void AForm::beSigned(const Bureaucrat& other)
         sig = true;
     else
         throw GradeTooLowException();
+}
+
+void AForm::setSing(bool sing )
+{
+    sig = sing;
 }
 
 AForm::~AForm()
