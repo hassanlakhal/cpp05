@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/14 01:59:43 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/11/26 00:59:42 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
     try
     {
-        Bureaucrat obj("GradeHigh", 149);
+        Bureaucrat obj("GradeHigh", 1);
         obj.decrement();
         std::cout << obj << std::endl;
         Bureaucrat obj1("GradeLow", 1);

@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:40 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/15 04:44:04 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 10:21:27 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ public:
     void beSigned(const Bureaucrat& other);
     ~Form();
 };
+std::ostream& operator<<(std::ostream& os, const Form& Form);
 #endif
 

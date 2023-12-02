@@ -30,12 +30,12 @@ public:
     class GradeTooHighException : public std::exception
     {
         public:
-            virtual const char* what() const throw();
+             const char* what() const throw();
     };
     class GradeTooLowException : public std::exception
     {
         public:
-            virtual const char* what() const throw();
+             const char* what() const throw();
     };
     AForm();
     AForm(const std::string& name, const int& gradeSing, const int& gradeExecute);
@@ -49,5 +49,6 @@ public:
     virtual void execute(Bureaucrat const & executor) const = 0;
     virtual ~AForm();
 };
+std::ostream& operator<<(std::ostream& os, const AForm& Form);
 #endif
 

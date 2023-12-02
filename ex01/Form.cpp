@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 03:08:35 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/16 23:28:28 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 10:18:30 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,11 @@ void Form::beSigned(const Bureaucrat& other)
 Form::~Form()
 {
     // std::cout << "destructor" << std::endl;
+}
+std::ostream& operator<<(std::ostream& os, const Form& Form)
+{
+    os << "Name of Form : "<< Form.getName() ; 
+    os << "\tGrade Sing of Form: " << Form.getGradeSing();
+    os << "\tGrade Execute of Form: " << Form.getGradeExecute() << std::endl;
+    return os;
 }

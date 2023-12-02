@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:57:00 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/11/24 22:19:42 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 09:47:09 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,12 +94,12 @@ void Bureaucrat::executeForm(AForm const & form)
     try
     {
         form.execute(*this);
-        std::cout << GREEN<<this->name << " executed " << form.getName() <<RESET<< std::endl;
+        std::cout << GREEN <<this->name << " executed " << form.getName() <<RESET<< std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
-        std::cout << RED<< "The bureaucrat "<< this->name << " has not been executed " << form.getName() <<RESET<< std::endl;
+        std::cout << RED << "The bureaucrat "<< this->name << " has not been executed " << form.getName() << RESET << std::endl;
     }
     
 }

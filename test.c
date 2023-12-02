@@ -86,6 +86,13 @@ int main()
 {
     printf("%d\n",ft_atoi("   -9223372036854775807"));
     printf("%d\n",atoi("-9223372036854775807"));
-    printf("%d",-9223372036854775807);
+    printf("%d",-9223372036854775807);	
+
+	printf("aaadsgdgdfgdfgdfgfdgl;fkgdfgf;dgjdflkgjdfl;gjfdgkljfgjfgjgdfjgkdfgfdgfgkdfga");
+	// while (1)
+	// {
+	
+	// }
+	
    
 }
