@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:25 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/02 17:11:37 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 18:27:50 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if(!this->getSig() || (executor.getGrade() > this->getGradeExecute()))
         throw GradeTooLowException();
-    std::cout << "creat file of the name: " <<"[ " << this->getName() << "_shrubbery ]" << std::endl;
     std::ofstream file(this->getName() + "_shrubbery");
+    if(!file.is_open())
+      throw std::runtime_error("The file " + this->getName() + "_shrubbery has not been created !!");
+   else
+       std::cout << "creat file of the name: " <<"[ " << this->getName() << "_shrubbery ]" << std::endl;
     file << "   ccee88oo\n";
     file << "  C8O8O8Q8PoOb o8oo\n";
     file << " dOB69QO8PdUOpugoO9bD\n";
