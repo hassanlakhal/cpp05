@@ -8,16 +8,16 @@ protected:
 public:
     A();
     A(std::string name);
-    void display()
-    {
-        std::cout << "A: " << this->name << std::endl;
-    }
-    ~A();
+   void display()
+   {
+
+   };
+    virtual ~A();
 };
 
 A::A()
 {
-    std::cout << " Base class " << std::endl;
+    // std::cout << " Base class " << std::endl;
 }
 
 A::A(std::string name)
@@ -28,9 +28,10 @@ A::A(std::string name)
 
 A::~A()
 {
+     std::cout << " Base class " << std::endl;
 }
 
-class B : virtual public A
+class B : public A
 {
 public:
     B();
@@ -44,7 +45,7 @@ public:
 
 B::B()
 {
-    std::cout << " Derive class B" << std::endl;
+    // std::cout << " Derive class B" << std::endl;
 }
 
 B::B(std::string name) : A(name + "_from_B")
@@ -54,65 +55,20 @@ B::B(std::string name) : A(name + "_from_B")
 
 B::~B()
 {
+     std::cout << " Derive class " << std::endl;
 }
 
-class C : virtual public A
-{
-public:
-    C();
-    C(std::string name);
-    void display()
-    {
-        std::cout << "C: " << this->name << std::endl;
-    }
-    ~C();
-};
 
-C::C()
+int main1()
 {
-    std::cout << " Derive class C" << std::endl;
+    A *a = new B;
+
+    delete a;
+  
+    return 0;
 }
-
-C::C(std::string name) : A(name + "_from_C")
-{
-    std::cout << " ----->Derive class C" << std::endl;
-}
-
-C::~C()
-{
-}
-
-class D : public C, public B
-{
-private:
-    std::string name;
-
-public:
-    D();
-    D(std::string name) : A(name + "_abc")
-    {
-        this->name = name;
-    }
-    ~D();
-    void test()
-    {
-        std::cout << "D: " << name << "\t" << A::name << "\t"<< B::name<< std::endl;
-    }
-};
-
-D::D()
-{
-}
-
-D::~D()
-{
-    
-}
-
 int main()
 {
-    D a("test");
-    a.test();
-
-    return 0;
+  main1();
+  system("leaks a.out");
 }

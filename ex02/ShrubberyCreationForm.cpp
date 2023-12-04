@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:11:25 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/02 18:27:50 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/04 09:33:40 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
 {
-   if (this != &other)
+   if (this != &other) 
       this->setSing(other.getSig());
    return *this;
 }
@@ -60,5 +60,3 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     file << "   .....//||||\\....\n";
    file.close();
 }
-
-// HIGHT -  1 2 3 4  5 6 7 8 . . . 150 -> LOW
