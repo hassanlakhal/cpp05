@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 21:56:49 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/05 10:01:46 by hlakhal-         ###   ########.fr       */
+/*   Created: 2023/11/15 22:11:13 by hlakhal-          #+#    #+#             */
+/*   Updated: 2023/11/24 22:29:23 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Bureaucrat.hpp"
-
-int main()
+#include"AForm.hpp"
+class PresidentialPardonForm : public AForm
 {
-    try
-    {
-        Bureaucrat obj("GradeHigh", 1);
-        // obj = obj1;
-        Form form("form",10,2);
-        // Form form1("test",150,2);
-        obj.signForm(form); 
-      
-    }
-    catch (std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-    return 0;
-}
+public:
+    PresidentialPardonForm();
+    PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(const PresidentialPardonForm& other);
+    PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
+   ~PresidentialPardonForm();
+    void execute(Bureaucrat const & executor) const;
+};
+
+

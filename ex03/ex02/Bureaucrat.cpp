@@ -6,7 +6,7 @@
 /*   By: hlakhal- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:57:00 by hlakhal-          #+#    #+#             */
-/*   Updated: 2023/12/05 10:03:17 by hlakhal-         ###   ########.fr       */
+/*   Updated: 2023/12/02 16:38:08 by hlakhal-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,20 +75,34 @@ void Bureaucrat::decrement()
         this->grade++;
 }
 
-void Bureaucrat::signForm(Form& other)
+void Bureaucrat::signForm(AForm& other)
 {
     try
     {
         (other).beSigned(*this);
-        std::cout << name << " signed " << other.getName() << std::endl;
     }
-    catch(const Form::GradeTooLowException& e)
+    catch(const AForm::GradeTooLowException& e)
     {
        std::cout << this->getName() << " couldn’t sign " << other.getName() << " because " << e.what() << std::endl;
     }
 }
 
 Bureaucrat::~Bureaucrat() {}
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << GREEN <<this->name << " executed " << form.getName() <<RESET<< std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << RED << "The bureaucrat "<< this->name << " has not been executed " << form.getName() << RESET << std::endl;
+    }
+    
+}
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 {
